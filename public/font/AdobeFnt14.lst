@@ -1,0 +1,79 @@
+%!Adobe-FontList 1.14
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SVN-Avobolditalic
+FamilyName:SVN-Avo
+StyleName:Bold Italic
+FullName:SVN-Avo bold talic
+MenuName:SVN-Avo
+StyleBits:3
+WritingScript:Roman
+OutlineFileName:D:\INTELERP\TRANG DỊCH VỤ\Font\SVN-Avo bold italic.ttf
+DataFormat:sfntData
+FileLength:69712
+FileModTime:1361273950
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SVN-Avobold
+FamilyName:SVN-Avo
+StyleName:Bold
+FullName:SVN-Avobold
+MenuName:SVN-Avo
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:D:\INTELERP\TRANG DỊCH VỤ\Font\SVN-Avo bold.ttf
+DataFormat:sfntData
+FileLength:73676
+FileModTime:1361243432
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SVN-Avoitalic
+FamilyName:SVN-Avo
+StyleName:Italic
+FullName:SVN-Avo italic
+MenuName:SVN-Avo
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:D:\INTELERP\TRANG DỊCH VỤ\Font\SVN-Avo italic.ttf
+DataFormat:sfntData
+FileLength:72740
+FileModTime:1361243530
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SVN-Avo
+FamilyName:SVN-Avo
+StyleName:Regular
+FullName:SVN-Avo
+MenuName:SVN-Avo
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\INTELERP\TRANG DỊCH VỤ\Font\SVN-Avo.ttf
+DataFormat:sfntData
+FileLength:72160
+FileModTime:1361243488
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+
