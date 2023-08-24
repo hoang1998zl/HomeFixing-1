@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
-            <img src="./img/LOGO.png" alt="">
+            <img src="{{ asset('img/LOGO.png') }}" alt="">
         </a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
             data-bs-target="#headerID" aria-expanded="false">
