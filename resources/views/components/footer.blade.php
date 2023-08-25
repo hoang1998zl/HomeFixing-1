@@ -1,4 +1,4 @@
-<div>
+<footer id="footer">
     <div class="wrapper">
         <img class="d-block mx-auto" src="{{ asset('img/LOGO.png') }}" alt="" style="height: 4.5rem;">
         <p class="text-center text-lg-start">
@@ -61,4 +61,4 @@
             Zalo
         </a>
     </div>
-</div>
+</footer>

@@ -858,7 +858,7 @@ main .whyChooseUs .whyChooseUs-wrapper .whyChooseUs-content ul li::after {
 }
 main .index-service .index-service-wrapper {
   padding: 4rem;
-  background-image: url("./../img/IMAGE 4.png");
+  background-image: url("../../img/services/4.png");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -898,7 +898,7 @@ main .index-service .xemThem-btn {
   font-size: 2rem;
 }
 main .mobileApp .mobileApp-wrapper {
-  background-image: url("./../img/IMAGE NỀN ỨNG DỤNG.png");
+  background-image: url("../../img/index/bg_footer.png");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;

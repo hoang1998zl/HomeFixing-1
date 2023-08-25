@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.home');
 });
+Route::get('/dich-vu', function () {
+    return view('pages.services');
+});
+Route::get('/goi-dich-vu', function () {
+    return view('pages.packages');
+});
+Route::get('/tin-tuc', function () {
+    return view('pages.news');
+});
+Route::get('/lien-he', function () {
+    return view('pages.contact');
+});
+
