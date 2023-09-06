@@ -169,7 +169,11 @@ header .navbar .collapse .navbar-nav .nav-item .nav-link {
   text-transform: capitalize;
   padding: 0 2rem;
 }
-header .navbar .collapse .navbar-nav .nav-item .nav-link:hover, header .navbar .collapse .navbar-nav .nav-item .nav-link.active {
+header .navbar .collapse .navbar-nav .nav-item .nav-link:hover {
+  color: #eda018;
+  text-decoration: overline;
+}
+header .navbar .collapse .navbar-nav .nav-item .nav-link.active {
   color: #eda018;
 }
 header .navbar form .ungDung-button {
