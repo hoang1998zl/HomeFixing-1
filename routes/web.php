@@ -31,6 +31,9 @@ Route::get('/lien-he', function () {
 Route::get('/chinh-sach', function () {
     return view('pages.policy');
 });
+Route::get('/ve-chung-toi', function () {
+    return view('pages.aboutus');
+});
 Route::get('/tai-ung-dung', function () {
     return view('pages.download');
 });
