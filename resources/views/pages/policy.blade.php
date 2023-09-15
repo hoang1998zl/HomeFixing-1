@@ -99,7 +99,7 @@
     <section class="dichVu">
         <div class="content">
             <div class="title">
-                <h1><b>3. Tính năng tiện ích</b></h1>
+                <h1><b>6. Tính năng tiện ích</b></h1>
             </div>
 
             <p>
