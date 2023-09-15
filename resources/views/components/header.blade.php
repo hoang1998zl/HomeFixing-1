@@ -4,6 +4,7 @@
     $active['goi-dich-vu'] = '';
     $active['tin-tuc'] = '';
     $active['lien-he'] = '';
+    $active['chinh-sach'] = '';
     if(Request::segment(1)){
         $active[Request::segment(1)] = 'active';
     } else {
@@ -36,6 +37,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{$active['lien-he']}}" href="/lien-he">liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{$active['chinh-sach']}}" href="/chinh-sach">chính sách</a>
                     </li>
                 </ul>
                 <form class="d-flex my-2 my-lg-0" action="">

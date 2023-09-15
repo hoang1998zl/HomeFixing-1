@@ -28,6 +28,9 @@ Route::get('/tin-tuc', function () {
 Route::get('/lien-he', function () {
     return view('pages.contact');
 });
+Route::get('/chinh-sach', function () {
+    return view('pages.policy');
+});
 Route::get('/tai-ung-dung', function () {
     return view('pages.download');
 });
