@@ -1,6 +1,7 @@
 @php
     $active['home'] = '';
     $active['san-pham'] = '';
+    $active['san-pham-chi-tiet'] = '';
     $active['dich-vu'] = '';
     $active['goi-dich-vu'] = '';
     $active['tin-tuc'] = '';
@@ -29,7 +30,7 @@
                         <a class="nav-link {{ $active['home'] }}" href="{{ route('home') }}">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ $active['san-pham'] }}" href="{{ route('san-pham') }}">Sản phẩm</a>
+                        <a class="nav-link {{ $active['san-pham'] }} {{ $active['san-pham-chi-tiet'] }}" href="{{ route('san-pham') }}">Sản phẩm</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ $active['dich-vu'] }}" href="{{ route('dich-vu') }}">dịch vụ</a>

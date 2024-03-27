@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Products as ModelsProducts;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Facades\Image;
 
 class Products extends Controller
 {
@@ -67,8 +65,7 @@ class Products extends Controller
 
             $image->move(public_path('img\products'), $fileName);
 
-            $url = url('/img/products/' . $fileName);
-            $products->image =  $url;
+            $products->image =  $fileName;
         }
 
         $products->status = 1;
@@ -113,8 +110,7 @@ class Products extends Controller
 
             $image->move(public_path('img\products'), $fileName);
 
-            $url = url('/img/products/' . $fileName);
-            $products->image =  $url;
+            $products->image =  $fileName;
         }
 
         if ($request->product_status == '1') {

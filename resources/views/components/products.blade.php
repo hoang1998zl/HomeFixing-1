@@ -10,7 +10,7 @@ $products = Products::where('status', 1)->limit(12)->get();
             @foreach ($products as $key => $product)
                 <div class="product">
                     <div class="img-wrapper">
-                        <img src="https://homefixing.vn/img/index/app.png" alt="">
+                        <img src="{{ asset('img/products/') }}/{{ $product->image }}" alt="">
 
                         <div class="hoverbox">
                             <a href="{{ route('san-pham-chi-tiet', $product->id) }}">

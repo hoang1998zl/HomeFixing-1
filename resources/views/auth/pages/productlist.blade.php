@@ -42,7 +42,7 @@
                             <p class="w-full">{{ $product->name }}</p>
                         </td>
                         <td>
-                            <img src="{{ $product->image }}" alt="" style="width: 100%;object-fit: contain">
+                            <img src="{{ asset('img/products/') }}/{{ $product->image }}" alt="" style="width: 100%;object-fit: contain">
                         </td>
                         <td>
                             <p class="w-full">{{ $product->price }}</p>

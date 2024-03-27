@@ -27,7 +27,7 @@ $categorylist = Category::all();
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="image-wrapper">
-                    <img src="https://homefixing.vn/img/index/app.png" alt="">
+                    <img src="{{ asset('img/products/') }}/{{ $product->image }}" alt="">
                 </div>
             </div>
 
