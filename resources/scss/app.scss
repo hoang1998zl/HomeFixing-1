@@ -177,6 +177,15 @@ $yellow: #ffd503;
   }
 }
 
+select[name="product_status"] {
+  width: 100%;
+  min-width: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
 .addproductmain {
   label {
     font-weight: bold;

@@ -42,14 +42,28 @@
                             <p class="w-full">{{ $product->name }}</p>
                         </td>
                         <td>
-                            <img src="{{ asset('img/' . $product->image) }}" alt=""
-                                style="width: 100%;object-fit: contain">
+                            <img src="{{ $product->image }}" alt="" style="width: 100%;object-fit: contain">
                         </td>
                         <td>
                             <p class="w-full">{{ $product->price }}</p>
                         </td>
                         <td>
-                            <p class="w-full">{{ $product->status }}</p>
+                            <form id="changeProductStatus_{{ $product->id }}"
+                                action="{{ route('productlist.update', $product->id) }}" method="POST">
+                                @csrf
+                                <select name="product_status" id="">
+                                    <option value="1" {{ $product->product_status == 1 ? 'selected' : '' }}>Còn hàng
+                                    </option>
+                                    <option value="0" {{ $product->product_status == 0 ? 'selected' : '' }}>Đã hết
+                                        hàng</option>
+                                </select>
+                                <button type="submit" style="display: none"></button>
+                            </form>
+                            <script>
+                                document.querySelector("#changeProductStatus_{{ $product->id }} select").addEventListener("change", function() {
+                                    document.getElementById("changeProductStatus_{{ $product->id }}").submit();
+                                });
+                            </script>
                         </td>
                         <td>
                             <a href="{{ route('product.list.update', $product->id) }}"
@@ -58,12 +72,20 @@
                             </a>
                         </td>
                         <td>
-                            <form id="changeStatus_{{ $product->id }}" action="{{ route('productlist.update', $product->id) }}" method="POST">
+                            <form id="changeStatus_{{ $product->id }}"
+                                action="{{ route('productlist.update', $product->id) }}" method="POST">
                                 @csrf
+                                <input type="text" name="status" value="{{ $product->status }}" style="display: none">
                                 <input type="checkbox" name="" id="" style="width: 1.8rem;aspect-ratio: 1"
-                                    {{ $product->status == 1 ? 'checked' : '' }}
-                                    onclick="document.getElementById('changeStatus_{{ $product->id }}').submit();">
+                                    {{ $product->status == 1 ? 'checked' : '' }}>
+                                    <button type="submit" style="display: none"></button>
                             </form>
+                            <script>
+                                document.querySelector("#changeStatus_{{ $product->id }} input[type=checkbox]").addEventListener("click", function() {
+                                    document.getElementById("changeStatus_{{ $product->id }}").submit();
+                                    // console.log('change');
+                                });
+                            </script>
                         </td>
                         <td>
                             <form action="{{ route('productlist.destroy', $product->id) }}" method="POST">

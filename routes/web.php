@@ -94,5 +94,5 @@ Route::middleware('auth')->group(function () {
     Route::post('/xoa-san-pham/{id}', [Products::class, 'destroy'])
         ->name('productlist.destroy');
     Route::post('/upload',  [Products::class, 'upload'])
-        ->name('ckeditor.upload');
+        ->name('productlist.upload');
 });

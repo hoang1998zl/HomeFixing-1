@@ -8,7 +8,12 @@ $dataCategory = ModelsCategory::all();
         <p>Chỉnh sửa sản phẩm</p>
     </div>
     <div class="content-wrapper addproductmain">
-        <form method="POST" action="{{ route('productlist.update', $product->id) }}">
+        {{-- <form method="POST" action="{{ route('productlist.upload') }}" enctype="multipart/form-data">
+            @csrf
+            <input type="file" name="photo">
+            <button type="submit"> gửi</button>
+        </form> --}}
+        <form method="POST" action="{{ route('productlist.update', $product->id) }}" enctype="multipart/form-data">
             @csrf
             <div class="container-fluid">
                 <div class="row clearfix">

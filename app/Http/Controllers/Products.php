@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Products as ModelsProducts;
 use Illuminate\Http\Request;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class Products extends Controller
 {
     public function index()
     {
-        $products = ModelsProducts::where('status', 1)->get();
+        $products = ModelsProducts::orderBy('id', 'desc')->get();
 
         return view('auth.pages.productlist', compact('products'));
     }
@@ -22,19 +23,31 @@ class Products extends Controller
 
     public function upload(Request $request)
     {
-        if ($request->hasFile('upload')) {
-            $originName = $request->file('upload')->getClientOriginalName();
-            $fileName = pathinfo($originName, PATHINFO_FILENAME);
-            $extension = $request->file('upload')->getClientOriginalExtension();
-            $fileName = $fileName . '_' . time() . '.' . $extension;
+        // if ($request->hasFile('photo')) {
+        //     $image = $request->file('photo');
+        //     $fileName = time() . '.' . $image->getClientOriginalExtension();
 
-            $request->file('upload')->move(public_path('img'), $fileName);
-            $CKEditorFuncNum = $request->input('CKEditorFuncNum');
-            $url = asset('img/' . $fileName);
-            $msg = 'Uploaded image success';
-            $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
+        //     $img = Image::make($image->getRealPath());
+        //     $img->resize(120, 120, function ($constraint) {
+        //         $constraint->aspectRatio();
+        //     });
 
-            return response()->json(['fileName' => $fileName, 'uploaded' => 1, 'url' => $url, 'response' => $response]);
+        //     $img->stream(); // <-- Key point
+
+        //     //dd();
+        //     Storage::disk('local')->put('images/1/smalls' . '/' . $fileName, $img, 'public');
+        // }
+
+        if ($request->hasFile('photo')) {
+            $image = $request->file('photo');
+            $fileName = time() . '.' . $image->getClientOriginalExtension();
+
+            $image->move(public_path('img\products'), $fileName);
+
+            $url = url('/img/products/' . $fileName);
+            return  $url;
+        } else {
+            return "No file uploaded";
         }
     }
 
@@ -47,19 +60,19 @@ class Products extends Controller
         $products->short_description = $request->input('short_description');
         $products->description = $request->input('description');
         $products->product_status = '1';
-        $products->image = $request->file('image');
 
-        // $image = $request->file('image');
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $fileName = time() . '.' . $image->getClientOriginalExtension();
 
-        // $model = ModelsProducts::find(1);
+            $image->move(public_path('img\products'), $fileName);
 
-        // $products->image = $model->addMedia($image)
-        //     ->toMediaCollection('image');
+            $url = url('/img/products/' . $fileName);
+            $products->image =  $url;
+        }
 
         $products->status = 1;
         $products->save();
-
-        // echo $products;
 
         return redirect()->route('productlist')->with('success', 'Thêm sản phẩm thành công');
     }
@@ -93,9 +106,27 @@ class Products extends Controller
         if ($request->description != null) {
             $products->description = $request->description;
         }
-        if ($request->image != null) {
-            $products->image = $request->image;
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $fileName = time() . '.' . $image->getClientOriginalExtension();
+
+            $image->move(public_path('img\products'), $fileName);
+
+            $url = url('/img/products/' . $fileName);
+            $products->image =  $url;
         }
+
+        if ($request->product_status == '1') {
+            $products->product_status = 1;
+        } else if ($request->product_status == '0') {
+            $products->product_status = 0;
+        }
+
+        if ($request->short_description != null) {
+            $products->short_description = $request->short_description;
+        }
+
         if ($request->status == 0) {
             $products->status = 1;
         } else if ($request->status == 1) {
