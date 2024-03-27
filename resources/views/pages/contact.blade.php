@@ -66,4 +66,5 @@
         </div>
     </section>
     <x-service-intro/>
+    <x-mobile-app />
 </x-frame>

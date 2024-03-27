@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="img-wrapper">
-            <img src="{{asset('img/index/1.png')}}" alt="">
+            <img src="{{ asset('img/index/1.png') }}" alt="">
         </div>
     </section>
 
@@ -52,7 +52,7 @@
         </div>
         <div class="whyChooseUs-wrapper">
             <div class="img-wrapper">
-                <img src="{{asset('img/index/2.png')}}" alt="">
+                <img src="{{ asset('img/index/2.png') }}" alt="">
             </div>
             <div class="whyChooseUs-content content">
                 <ul>
@@ -90,5 +90,12 @@
         </div>
     </section>
 
-    <x-service-intro/>
+    <x-service-intro />
+    <div class="container mx-auto my-4">
+        <p class="index-title">
+            Gợi ý sản phẩm
+        </p>
+    </div>
+    <x-products />
+    <x-mobile-app />
 </x-frame>

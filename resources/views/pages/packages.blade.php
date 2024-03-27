@@ -20,4 +20,6 @@
             <img src="{{asset('img/icon/more.png')}}" alt="" style="width: 7vw;">
         </button>
     </div>
+    
+    <x-mobile-app />
 </x-frame>

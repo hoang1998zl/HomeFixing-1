@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="{{asset('res/libs/OwlCarousel2/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('res/libs/OwlCarousel2/assets/owl.theme.default.min.css')}}">
     <link rel="stylesheet" href="{{asset('res/css/style.css')}}">
-
+    
+    <link rel="stylesheet" href="{{ asset('http://localhost/cake/homefixing/resources/css/app.css') }}">
 </head>
 <body>
     <x-header />

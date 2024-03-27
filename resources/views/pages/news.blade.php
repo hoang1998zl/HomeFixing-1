@@ -4,7 +4,7 @@
             <div class="row gy-4">
                 <div class="col-6 col-lg-4">
                     <a class="card" href="tin-tuc-chi-tiet.html">
-                        <img class="card-img-top" src="{{asset('img/news/1.png')}}" alt="Title">
+                        <img class="card-img-top" src="{{ asset('img/news/1.png') }}" alt="Title">
                         <div class="card-body">
                             <h4 class="card-title">Tin tức 1</h4>
                             <p class="card-time">05/05/2023</p>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-6 col-lg-4">
                     <a class="card" href="tin-tuc-chi-tiet.html">
-                        <img class="card-img-top" src="{{asset('img/news/2.png')}}" alt="Title">
+                        <img class="card-img-top" src="{{ asset('img/news/2.png') }}" alt="Title">
                         <div class="card-body">
                             <h4 class="card-title">Tin tức 2</h4>
                             <p class="card-time">05/05/2023</p>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-6 col-lg-4">
                     <a class="card" href="tin-tuc-chi-tiet.html">
-                        <img class="card-img-top" src="{{asset('img/news/3.png')}}" alt="Title">
+                        <img class="card-img-top" src="{{ asset('img/news/3.png') }}" alt="Title">
                         <div class="card-body">
                             <h4 class="card-title">Tin tức 3</h4>
                             <p class="card-time">05/05/2023</p>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-6 col-lg-4">
                     <a class="card" href="tin-tuc-chi-tiet.html">
-                        <img class="card-img-top" src="{{asset('img/news/4.png')}}" alt="Title">
+                        <img class="card-img-top" src="{{ asset('img/news/4.png') }}" alt="Title">
                         <div class="card-body">
                             <h4 class="card-title">Tin tức 4</h4>
                             <p class="card-time">05/05/2023</p>
@@ -59,5 +59,6 @@
             </div>
         </div>
     </section>
-    <x-service-intro/>    
+    <x-service-intro />
+    <x-mobile-app />
 </x-frame>

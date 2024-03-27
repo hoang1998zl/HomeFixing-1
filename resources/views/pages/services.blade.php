@@ -181,4 +181,6 @@
             </div>
         </div>
     </section>
+    
+    <x-mobile-app />
 </x-frame>

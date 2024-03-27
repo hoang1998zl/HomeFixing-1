@@ -97,4 +97,5 @@
     <img src="{{asset('img/services/10.png')}}" alt="" class="w-100">
 
 
+    <x-mobile-app />
 </x-frame>
