@@ -182,6 +182,11 @@ select[name=product_status] {
   min-height: 400px;
   resize: none;
 }
+.addproductmain table input,
+.addproductmain table select,
+.addproductmain table textarea {
+  margin-bottom: 0rem;
+}
 
 .ck-editor__editable {
   min-height: 300px;

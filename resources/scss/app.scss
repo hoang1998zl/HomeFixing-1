@@ -208,6 +208,14 @@ select[name="product_status"] {
     min-height: 400px;
     resize: none;
   }
+
+  table {
+    input,
+    select,
+    textarea {
+      margin-bottom: 0rem;
+    }
+  }
 }
 
 .ck-editor__editable {

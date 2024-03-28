@@ -4,7 +4,7 @@
     </a>
 
     <div class="adminmenu">
-        <a href="">
+        <a href="{{ route('account.list') }}">
             Tài khoản
         </a>
         <div class="dropdown">

@@ -1705,6 +1705,15 @@ main .contact .contact-wrapper.contact-right .contact-form .button {
   outline: 1px #000000 solid;
 }
 
+select[name=product_status] {
+  width: 100%;
+  min-width: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
 .addproductmain label {
   font-weight: bold;
   margin-top: 0.5rem;
@@ -1723,6 +1732,11 @@ main .contact .contact-wrapper.contact-right .contact-form .button {
 .addproductmain textarea {
   min-height: 400px;
   resize: none;
+}
+.addproductmain table input,
+.addproductmain table select,
+.addproductmain table textarea {
+  margin-bottom: 0rem;
 }
 
 .ck-editor__editable {
@@ -1924,14 +1938,4 @@ main .contact .contact-wrapper.contact-right .contact-form .button {
 .pagination a:hover, .pagination a.active {
   background-color: #ffd503;
   color: #fff;
-}
-
-
-select[name=product_status] {
-  width: 100%;
-  min-width: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-  margin-bottom: 0.5rem;
 }

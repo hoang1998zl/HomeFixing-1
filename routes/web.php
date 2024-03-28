@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\Category;
 use App\Http\Controllers\Products;
+use App\Http\Controllers\User as ControllersUser;
 use App\Models\Products as ModelsProducts;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -95,4 +96,13 @@ Route::middleware('auth')->group(function () {
         ->name('productlist.destroy');
     Route::post('/upload',  [Products::class, 'upload'])
         ->name('productlist.upload');
+
+    Route::get('/account', [ControllersUser::class, 'index'])
+        ->name('account.list');
+    Route::post('/accountstore', [ControllersUser::class, 'store'])
+        ->name('account.store');
+    Route::post('/accountupdate/{id}', [ControllersUser::class, 'update'])
+        ->name('account.update');
+    Route::post('/accountdestroy/{id}', [ControllersUser::class, 'destroy'])
+        ->name('account.destroy');
 });

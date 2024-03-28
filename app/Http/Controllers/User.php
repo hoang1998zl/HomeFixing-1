@@ -2,26 +2,55 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User as ModelsUser;
 use Illuminate\Http\Request;
 
 class User extends Controller
 {
     public function index()
     {
-        return view('user');
+        $users = ModelsUser::where('status', 1)->get();
+
+        return view('auth.pages.accountlist', compact('users'));
     }
 
     public function store(Request $request)
     {
-        dd($request->all());
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+        
+        $user = new ModelsUser();
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->password = $request->input('password');
+        $user->status = 1;
+        $user->save();
+        return redirect()->route('account.list');
     }
 
-    public function edit()
+    public function update(Request $request, $id)
     {
-        return view('user');
+        $user = ModelsUser::find($id);
+        if ($request->name != null) {
+            $user->name = $request->name;
+        }
+        if ($request->email != null) {
+            $user->email = $request->email;
+        }
+        if ($request->password != null) {
+            $user->password = $request->password;
+        }
+        $user->save();
+        return redirect()->route('account.list');
     }
-    public function destroy()
+    public function destroy($id)
     {
-        return view('user');
+        $user = ModelsUser::find($id);
+        $user->status = 0;
+        $user->save();
+        return redirect()->route('account.list');
     }
 }
